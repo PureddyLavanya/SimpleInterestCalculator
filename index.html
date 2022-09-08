@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Interest Calculator</title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZcKhgRCLEcsAWOBtaORoFqNhidd7NMiQQKQ&usqp=CAU">
+    <style>
+      .center{
+        background:yellow;
+	      height:450px;
+	      position:absolute;
+	      padding: 30px 30px;
+        width: 400px;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 5px;
+        font-family: 'Poppins',sans-serif;
+        box-shadow: 25px 25px 30px rgba(0,0,0,0.15);
+	      border:6px solid purple;
+	      border-radius:10px;
+      	}
+      .inp{
+        border:2px solid red;
+        border-radius:4px;
+        background:ivory;
+      }
+    </style>
+  </head>
+  <body align="center">
+    <div class="center">
+      <h2><u>Simple Interest Calculator</u></h2><br>
+      Enter Principal Amount:<input type="number" size="40%" class="inp" id="p"><br><br>
+      Enter rate:<input type="number" size="40%" class="inp" id="r"><br><br>
+      Enter time(in years):<input type="number" size="40%" class="inp" id="t"><br><br>
+      <input type="button" value="Calculate Simple Interest" class="btn" onClick="getSI()"><br><br>
+      Simple Interest is:<input type="text" id="ans" size="40%" class="inp">
+    </div>
+    <script>
+      function getSI()
+      {
+        var a=document.getElementById("p").value;
+        var b=document.getElementById("r").value;
+        var c=document.getElementById("t").value;
+        var s=(a*b*c)/100;
+        document.getElementById("ans").value=s;
+      }
+    </script>
+  </body>
+</html>
